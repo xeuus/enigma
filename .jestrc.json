@@ -1,0 +1,9 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testMatch": ["**/*.test.(ts|tsx)"],
+  "collectCoverageFrom": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "coverageDirectory": "./coverage",
+  "moduleDirectories": ["node_modules", "src"],
+  "setupFiles": ["../../.jestSetup.ts"]
+}

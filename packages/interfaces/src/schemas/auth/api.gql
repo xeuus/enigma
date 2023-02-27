@@ -1,0 +1,44 @@
+# types
+
+type UserCredentials {
+  bearer: String!
+  issuedAt: Date!
+  expireAt: Date!
+}
+
+# input
+
+input LoginRequest {
+  email: String!
+  password: String!
+  remember: Boolean
+}
+
+input RegisterRequest {
+  name: String!
+  email: String!
+  password: String!
+}
+
+input ForgotRequest {
+  email: String!
+  redirectUrl: String!
+}
+
+input ChangePassword {
+  token: String!
+  password: String!
+}
+
+# query/mutation
+
+type AuthQuery {
+  user: User
+}
+
+type AuthMutation {
+  login(request: LoginRequest!): UserCredentials!
+  register(request: RegisterRequest!): UserCredentials!
+  forgot(request: ForgotRequest!): Void
+  changePassword(request: ChangePassword!): Void
+}

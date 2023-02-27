@@ -1,0 +1,22 @@
+enum Platform {
+  ANDROID
+  IOS
+  DESKTOP
+  PWA
+}
+
+type LoginHistory {
+  platorm: Platform!
+  issuedAt: Date!
+}
+
+type User {
+  id: ID
+  name: String
+  email: String
+  password: String
+  partyType: Int
+  isActive: Boolean
+  isVerified: Boolean
+  loginHistory: [LoginHistory]
+}

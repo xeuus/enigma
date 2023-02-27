@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.production
+npm-debug.log*
+.idea
+node_modules
+dist
+public/index.html
+*.pdf
+server/utils/out/**/*.json
+coverage/
+.vscode
+*.bin
+*.sqlite
+*.sh
+*.log
+/stats.json
